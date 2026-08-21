@@ -136,3 +136,25 @@ a { color: var(--accent); }
   color: var(--muted);
   font-size: 0.9rem;
 }
+
+/* ---------- Hero with side image ---------- */
+.hero-split {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space);
+}
+
+.hero-split .hero-text { flex: 1 1 auto; min-width: 0; }
+
+.hero-img {
+  flex: 0 0 auto;
+  width: min(22rem, 40%);
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 48rem) {
+  .hero-split { flex-direction: column; }
+  .hero-img { width: 100%; }
+}
